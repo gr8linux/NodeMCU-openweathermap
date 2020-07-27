@@ -6,9 +6,15 @@
 #include <Wire.h>              //for ESP8266 use bug free i2c driver https://github.com/enjoyneering/ESP8266-I2C-Driver
 #include <LiquidCrystal_PCF8574.h>
 #include "mysecret.h"
+#include <EasyButton.h>
 
+// Arduino pin where the buttons are connected to.
+#define BUTTON_PIN 0
 
+#define BAUDRATE 9600
 
+// Instance of the button.
+EasyButton button(BUTTON_PIN);
 
 
 LiquidCrystal_PCF8574 lcd(0x3F); // set the LCD address to 0x27 for a 16 chars and 2 line display
@@ -17,6 +23,8 @@ OpenWeather weather(Key, "Tehran,ir");
 OpenWeather forecast(Key, "Tehran,ir",1);
 
 String Country = "Tehran, Ir";
+
+
 void displayWeather(String location,String description)
 {
   lcd.clear();
@@ -52,11 +60,42 @@ void displayGettingData()
   lcd.print("Getting data");
 }
 
+void buttonPressed()
+{
+  lcd.clear();
+  //lcd.setCursor(0,0);
+  lcd.print("IP:");
+  //lcd.setCursor(0,1);
+  lcd.print(WiFi.localIP().toString());
+  lcd.setCursor(0,1);
+  lcd.print("DNS:");
+  lcd.print(WiFi.dnsIP().toString());
+  //lcd.blink();
+  //delay(1000);  
+
+  //Serial.println("Button pressed");
+}
+
+
+void sequenceEllapsed()
+{
+  Serial.println("Double click");
+}
+
+void buttonISR()
+{
+  /*
+    When button is being used through external interrupts, 
+    parameter INTERRUPT must be passed to read() function
+   */
+  button.read();
+}
+
 
 void setup() {
   // put your setup code here, to run once:
   int error = 0;
-  Serial.begin(9200);
+  Serial.begin(9600);
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   if (WiFi.waitForConnectResult() != WL_CONNECTED) {
@@ -75,7 +114,24 @@ void setup() {
 
   } else {
     Serial.println("LCD not found.");
-  } // if
+  } 
+  
+  button.begin();
+
+  button.onPressed(buttonPressed);
+
+  button.onSequence(2, 1500, sequenceEllapsed);
+
+  if (button.supportsInterrupt())
+  {
+    button.enableInterrupt(buttonISR);
+    Serial.println("Button will be used through interrupts");
+  }
+  else
+  {
+    Serial1.println("Button is starting without interrupt");
+  }
+  
 
 }
 
