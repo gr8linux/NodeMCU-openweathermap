@@ -29,11 +29,11 @@ Compile the code and upload into your NodeMCU
 For NodeMCU you may connect the wire like the below 
 ![Pinout](./lib/pinout.png?raw=true "Pinout")
 
-I2C LCD Module              ESP8266
-GND   <--------------------> GND
-VCC    <-------------------> Vin
-SDA   <--------------------> D2 (NodeMCU) GPIO 4
-SCL   <--------------------> D1 (NodeMCU) GPIO 5
+* I2C LCD Module              ESP8266
+* GND   <--------------------> GND
+* VCC    <-------------------> Vin
+* SDA   <--------------------> D2 (NodeMCU) GPIO 4
+* SCL   <--------------------> D1 (NodeMCU) GPIO 5
 
 **To Do**
 * Add OTA
