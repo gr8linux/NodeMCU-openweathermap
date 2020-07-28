@@ -1,6 +1,6 @@
 **NodeMCU openweathermap** 
 
-![live picture](./lib/live.jpg?raw=true "Live Image")
+![live picture](./lib/live.png?raw=true "Live Image")
 
 This project read the weather information from <a href="https://openweathermap.org/" target="_blank">openweathermap</a> and disply on 2x16 LCD.
 Please remember to modify the project you need to edit the code inside the platformio and compile it.
