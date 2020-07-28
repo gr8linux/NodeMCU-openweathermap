@@ -19,7 +19,7 @@ ESP8266 from platforms
 SimpleWeather from library
 LiquidCrystal_PCF8574 from library
 EasyButton from library
-
+Edit mysecret.hpp with your own openweathermap key and your wifi secret and SSID
 Compile the code and upload into your NodeMCU
 
 **Hardware**
