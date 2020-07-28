@@ -7,7 +7,9 @@ Please remember to modify the project you need to edit the code inside the platf
 
 **Getting Start**
 
+
 **Software**
+
 Install [vscode](https://code.visualstudio.com/) or other [platformio](https://platformio.org/platformio-ide) compatible IDE you like it, add the platformio plugin insider your IDE (vscode easily provide the plugin by search and install ).
 
 Inside the platformio panel add the below library from the library tab:
@@ -19,13 +21,18 @@ LiquidCrystal_PCF8574 from library
 EasyButton from library
 
 Compile the code and upload into your NodeMCU
+
 **Hardware**
+
 * NodeMCU board mine have 4M flash 
 * 16x2 LCD with i2c pcf8574 ( you just used 2 GPIO to drive the LCD)
 * Single row female cable
 * USB phone charger or computer USB 
 * microusb cable
+
+
 **Pinout**
+
 For NodeMCU you may connect the wire like the below 
 ![Pinout](./lib/pinout.png?raw=true "Pinout")
 
