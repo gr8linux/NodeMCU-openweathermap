@@ -43,11 +43,22 @@ For NodeMCU you may connect the wire like the below
 * SDA   <--------------------> D2 (NodeMCU) GPIO 4
 * SCL   <--------------------> D1 (NodeMCU) GPIO 5
 
+**Deep dive**
+Openweathermap will prepare some level of free weather API to fetch the current and forcast information by calling the REST API.
+You need to subscribe and get your application KEY and update your mysecret.hpp file with that information.
+NodeMCU will connect to the internet via WiFi and call the API each minute and display the information on 2X16 LCD.
+I add some hack in User button built in with NodeMCU to display the IP address and DNS just in case you can't see the result you will sure that the network is available.
+I
+
+
 **To Do**
 * Add OTA
-* Add plug and play LCD driver address detection
-* Increase the functionaity by add more keys 
-* OLED have more fun display expriences
+* Add simple HTTP server to show weather information and configuration on the web
+* Add plug and play LCD driver address detection it's made me fool some times to find it
+* Increase the functionaity by add more keys to have some access to configuration 
+* OLED have more fun display expriences 
+* Hacking some graphic character to make UI more readable
+  
 
 
 
