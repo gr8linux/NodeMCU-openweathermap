@@ -5,7 +5,7 @@
 #include "SimpleWeather.h"
 #include <Wire.h>              //for ESP8266 use bug free i2c driver https://github.com/enjoyneering/ESP8266-I2C-Driver
 #include <LiquidCrystal_PCF8574.h>
-#include "mysecret.h"
+#include "mysecret.hpp"
 #include <EasyButton.h>
 
 // Arduino pin where the buttons are connected to.
