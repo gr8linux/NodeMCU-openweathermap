@@ -1,6 +1,6 @@
 **NodeMCU openweathermap** 
 
-This project read the weather information from openweathermap and disply on 2x16 LCD.
+This project read the weather information from [openweathermap](https://openweathermap.org/) and disply on 2x16 LCD.
 Please remember to modify the project you need to edit the code inside the platformio and compile it.
 
 **Getting Start**
