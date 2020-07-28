@@ -17,4 +17,12 @@ EasyButton from library
 
 Compile the code and upload into your NodeMCU
 
+**To Do**
+* Tidy up more
+* Add OTA
+* Add plug and play LCD driver address detection
+* Increase the functionaity by add more keys 
+* OLED have more fun display expriences
+
+
 
