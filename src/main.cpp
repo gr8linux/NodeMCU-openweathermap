@@ -22,16 +22,25 @@ weatherData w;
 OpenWeather weather(Key, "Tehran,ir");
 OpenWeather forecast(Key, "Tehran,ir",1);
 
-String Country = "Tehran, Ir";
+String Country = "Tehran,Ir";
 
 
-void displayWeather(String location,String description)
+void displayWeather(String location,String description,int current=0)
 {
   lcd.clear();
   lcd.setCursor(0,0);
   //lcd.print(location);
   //lcd.print(", ");
   lcd.print(Country);
+  if(current==1)
+  {
+    lcd.print("    Now");
+  }
+  else
+  {
+    lcd.print("    For");  
+  }
+  
   lcd.setCursor(0,1);
   lcd.print(description);
 }
@@ -154,7 +163,7 @@ void loop() {
   Serial.println(w.humidity);
   Serial.print("Rain: ");
   Serial.println(w.rain);
-  displayWeather( w.weather, w.description);
+  displayWeather( w.weather, w.description,1);
   delay(10000);
   displayConditions(w.current_Temp, w.humidity,w.min_temp,w.max_temp);
   //Serial.print("Full Response: ");
