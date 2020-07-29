@@ -26,6 +26,7 @@ Compile the code and upload into your NodeMCU
 
 * NodeMCU board mine have 4M flash 
 * 16x2 LCD with i2c pcf8574 ( you just used 2 GPIO to drive the LCD)
+* DHT22 sensor
 * Single row female cable
 * USB phone charger or computer USB 
 * microusb cable
@@ -39,9 +40,21 @@ For NodeMCU you may connect the wire like the below
   I2C LCD Module<------------>ESP8266
 
 * GND   <--------------------> GND
-* VCC    <-------------------> Vin
+* VCC   <--------------------> 3.3v
 * SDA   <--------------------> D2 (NodeMCU) GPIO 4
 * SCL   <--------------------> D1 (NodeMCU) GPIO 5
+
+
+![DHT22](./lib/dht22.png?raw=true "DHT22")
+
+  DHT22 <-------------------->ESP8266
+
+* GND   <--------------------> GND
+* VCC   <--------------------> 3.3v
+* DATA  <--------------------> D5 (NodeMCU) GPIO 14
+
+
+
 
 **Deep dive**
 Openweathermap will prepare some level of free weather API to fetch the current and forcast information by calling the REST API.
