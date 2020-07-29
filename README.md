@@ -53,8 +53,8 @@ I
 
 **To Do**
 * Connect to the cloud
-* Add OTA
-* Add simple HTTP server to show weather information and configuration on the web
+* OTA update 
+* HTTP server to show weather information and configuration on the web
 * Add plug and play LCD driver address detection it's made me fool some times to find it
 * Increase the functionaity by add more keys to have some access to configuration 
 * OLED have more fun display expriences 
