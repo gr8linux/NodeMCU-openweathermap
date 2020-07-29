@@ -52,6 +52,7 @@ I
 
 
 **To Do**
+* Connect to the cloud
 * Add OTA
 * Add simple HTTP server to show weather information and configuration on the web
 * Add plug and play LCD driver address detection it's made me fool some times to find it
