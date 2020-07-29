@@ -52,8 +52,10 @@ I
 
 
 **To Do**
-* Connect to the cloud
+* Implement nonblocking delays
+* Connect to the cloud or an MQTT service
 * OTA update 
+* *Reading the indoor temperature and humidity by DHT22* Done
 * HTTP server to show weather information and configuration on the web
 * Add plug and play LCD driver address detection it's made me fool some times to find it
 * Increase the functionaity by add more keys to have some access to configuration 
