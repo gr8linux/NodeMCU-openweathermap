@@ -65,7 +65,7 @@ In addition if you like to read the room humidity and temperature add a DHT22 se
 
 
 **To Do**
-* Implement nonblocking delays
+* --- *Implement nonblocking delays* --- Done
 * Connect to the cloud or an MQTT service
 * OTA update 
 * --- *Reading the indoor temperature and humidity by DHT22* --- Done
